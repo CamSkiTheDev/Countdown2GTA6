@@ -47,8 +47,23 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="flex justify-center items-center w-full h-full bg-[url('/bg.jpg')] bg-cover bg-center">
-      <div className="flex flex-col items-center justify-center w-full h-full min-h-screen bg-black/50 space-y-8 p-4">
+    <div className="flex justify-center items-center w-full h-full bg-cover bg-center relative">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/bg.jpg"
+        preload="none"
+        className="absolute w-full h-full object-cover object-center"
+      >
+        <source src="/GTA-VI-Trailer-1.mp4" type="video/mp4" />
+      </video>
+
+      <div className="flex flex-col items-center justify-center w-full h-full min-h-screen bg-black/75 space-y-8 p-4 z-10">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-pricedown">
+          Countdown 2 GTA 6
+        </h1>
         {/* For TSX uncomment the commented types below */}
         <div className="font-roboto grid grid-flow-col gap-5 text-center auto-cols-max">
           <div className="flex flex-col">
