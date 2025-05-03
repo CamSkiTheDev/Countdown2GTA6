@@ -1,0 +1,30 @@
+name: Daily GTA 6 Countdown X Post
+
+on:
+  schedule:
+    - cron: "0 16 * * *" # Every day at 10:00 AM Mountain Time (adjust as needed)
+  workflow_dispatch:
+
+jobs:
+  post-to-x:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Post daily countdown x
+        run: node post-x.js
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
