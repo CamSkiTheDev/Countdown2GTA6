@@ -16,7 +16,7 @@ const now = new Date();
 const timeDiff = gtaReleaseDate.getTime() - now.getTime();
 const daysRemaining = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
-const tweet = `${daysRemaining} days until GTA 6. The countdown to Vice City continues. @RockstarGames #GTA6 #ViceCity #CountdownToGTA6 #PCGaming #Gamer #GTA #GTAV #GTAVI #RockstarGames #GTA6Countdown`;
+const tweet = `Only ${daysRemaining} days until GTA 6. The countdown to Vice City continues. @RockstarGames #GTA6 #ViceCity #CountdownToGTA6 #PCGaming #Gamer #GTA #GTAV #GTAVI #RockstarGames #GTA6Countdown #Gaming #GTAOnline #GrandTheftAuto #GTACommunity #PlayStation #Xbox`;
 
 (async () => {
   try {
