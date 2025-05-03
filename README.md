@@ -25,7 +25,7 @@ Built using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcs
 
 - Posts a daily tweet using GitHub Actions and Node.js
   > `389 days until GTA 6. The countdown to Vice City continues.`
-- Uses the [Twitter API v2](https://developer.twitter.com/en/docs/twitter-api)
+- Uses the [X(Twitter) API v2](https://developer.x.com/en/docs/x-api)
 - Runs every day at 10:00 AM Mountain Time
 
 ---
@@ -54,7 +54,7 @@ Built using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcs
 │   └── og-image.jpg
 ├── styles/
 │   └── globals.css
-├── post-tweet.js              # Twitter automation script
+├── post-x.js              # X automation script
 ├── package.json               # Project dependencies
 ├── .github/
 │   └── workflows/
@@ -73,7 +73,7 @@ cd countdown2gta6
 npm install
 ```
 
-### 2. Add Twitter API Secrets
+### 2. Add X API Secrets
 
 In GitHub → Settings → Secrets → Actions, add:
 
@@ -129,4 +129,4 @@ npm run dev         # Local preview of landing page
 
 ## 📮 Contact
 
-Want to contribute or suggest a feature? Submit a PR or reach out on [X](https://twitter.com/yourhandle).
+Want to contribute or suggest a feature? Submit a PR or reach out on [X](https://x.com/Countdown2GTA6).
