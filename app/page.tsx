@@ -12,7 +12,9 @@ export default function Home() {
   const relealseDate = new Date("2026-05-26T00:00:00Z");
   const initRemainingTime = useMemo<RemainingTime>(() => {
     const now = new Date();
-    const timeDiff = relealseDate.getTime() - now.getTime();
+    const localOffset = now.getTimezoneOffset() * 60000; // in milliseconds
+    const localNow = new Date(now.getTime() - localOffset);
+    const timeDiff = relealseDate.getTime() - localNow.getTime();
 
     return {
       days: Math.floor(timeDiff / (1000 * 3600 * 24)),
@@ -28,7 +30,9 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      const timeDiff = relealseDate.getTime() - now.getTime();
+      const localOffset = now.getTimezoneOffset() * 60000; // in milliseconds
+      const localNow = new Date(now.getTime() - localOffset);
+      const timeDiff = relealseDate.getTime() - localNow.getTime();
 
       setRemainingTime({
         days: Math.floor(timeDiff / (1000 * 3600 * 24)),
