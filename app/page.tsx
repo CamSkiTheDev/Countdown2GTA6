@@ -9,7 +9,7 @@ type RemainingTime = {
 };
 
 export default function Home() {
-  const relealseDate = new Date("2026-05-23T00:00:00Z");
+  const relealseDate = new Date("2026-05-26T00:00:00Z");
   const initRemainingTime = useMemo<RemainingTime>(() => {
     const now = new Date();
     const timeDiff = relealseDate.getTime() - now.getTime();
@@ -109,7 +109,7 @@ export default function Home() {
           </div>
         </div>
         <h3 className="font-roboto font-black text-lg md:text-2xl lg:text-4xl text-shadow-xl opacity-90">
-          Until May 23rd, 2026
+          Until May 26th, 2026
         </h3>
       </div>
     </div>
