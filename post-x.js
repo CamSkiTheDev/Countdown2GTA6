@@ -1,4 +1,5 @@
-import { TwitterApi } from "twitter-api-v2";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { TwitterApi } = require("twitter-api-v2");
 
 // Twitter API credentials from GitHub secrets
 const client = new TwitterApi({
