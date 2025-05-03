@@ -50,11 +50,9 @@ export default function Home() {
           <div className="flex flex-col">
             <span className="countdown font-mono text-4xl md:text-6xl lg:text-8xl">
               <span
-                style={
-                  { "--value": remainingTime.days } /* as React.CSSProperties */
-                }
+                style={{ "--value": remainingTime.days } as React.CSSProperties}
                 aria-live="polite"
-                aria-label={remainingTime.days}
+                aria-label={remainingTime.days.toString()}
               >
                 {remainingTime.days}
               </span>
@@ -67,10 +65,10 @@ export default function Home() {
                 style={
                   {
                     "--value": remainingTime.hours,
-                  } /* as React.CSSProperties */
+                  } as React.CSSProperties
                 }
                 aria-live="polite"
-                aria-label={remainingTime.hours}
+                aria-label={remainingTime.hours.toString()}
               >
                 {remainingTime.hours}
               </span>
@@ -83,10 +81,10 @@ export default function Home() {
                 style={
                   {
                     "--value": remainingTime.minutes,
-                  } /* as React.CSSProperties */
+                  } as React.CSSProperties
                 }
                 aria-live="polite"
-                aria-label={remainingTime.minutes}
+                aria-label={remainingTime.minutes.toString()}
               >
                 {remainingTime.minutes}
               </span>
@@ -99,10 +97,10 @@ export default function Home() {
                 style={
                   {
                     "--value": remainingTime.seconds,
-                  } /* as React.CSSProperties */
+                  } as React.CSSProperties
                 }
                 aria-live="polite"
-                aria-label={remainingTime.seconds}
+                aria-label={remainingTime.seconds.toString()}
               >
                 {remainingTime.seconds}
               </span>
